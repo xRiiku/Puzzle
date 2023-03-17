@@ -1,0 +1,75 @@
+body {
+    font-family: Arial, Verdana, sans-serif;
+    background-color: #B3D67C;
+}
+
+#piezas {
+    display: grid;
+    position: relative;
+    float: center;
+    grid-template-columns: repeat(3, 1fr);
+    height: 50vh;
+    width: 50vh;
+}
+
+#puzzle {
+    display: grid;
+    position: relative;
+    float: left;
+    grid-template-columns: repeat(3, 1fr);
+    border: 1px solid black;
+    height: 50vh;
+    width: 50vh;
+}
+
+.pieza {
+    width: 157px;
+    height: 157px;
+    background-size: cover;
+    
+}
+
+.placeholder {
+    background-color: #F2F2F2;
+    outline: 1px solid #333;
+    width: 156px;
+    height: 156px;
+    transition: 1s;
+}
+
+.placeholder.hover {
+    background-color: orange;
+}
+
+.placeholder .pieza {
+    margin: 0;
+}
+
+#mensaje {
+    color: black;
+    text-align: center;
+    display: none;
+}
+
+.ganaste {
+    background-color: #B3D67C;
+}
+
+.ganaste #mensaje {
+    display: block;
+}
+
+.ganaste .placeholder {
+    outline: none;
+}
+
+.ganaste #piezas {
+    display: none;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
